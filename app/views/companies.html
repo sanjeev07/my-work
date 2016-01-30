@@ -1,0 +1,261 @@
+    <div class="col-sm-9 col-md-10 main">
+
+            <h1 class="page-header">
+                Search Companies
+              </h1>
+
+
+
+            <form class="form-inline">
+          <div class="form-group">
+                <label for="repeatSelect">Search By: </label>
+                <select name="repeatSelect" id="repeatSelect" class="form-control" ng-model="companies.searchOptions.repeatSelect">
+                                  <option ng-repeat="option in companies.searchOptions.availableOptions" value="{{option.id}}">{{option.name}} </option>
+                </select>
+          </div>
+          <div class="form-group">
+
+                <input type="text" class="form-control" id="searchCriteria" ng-model="companies.searchCriteria" placeholder="searchCriteria">
+          </div class="form-group">
+
+                            <button class="btn btn-default" ng-click="companies.searchCompany()" type="button"><span class="glyphicon glyphicon-search"></span>Search</button>
+          </form>
+    <div class="row"></div>    
+        <div ng-show="companies.noData">
+            <H3> Search Results</H3>
+            <H5> No Companies matching your search were found in our database!!</H5>
+        </div>
+        
+        <!-- Edit Form Here -->
+        
+         <div class="row"></div>  
+        
+
+        
+            <div class="col-xs-12 col-sm-12 col-md-9 col-lg-10  column col-sm-offset-0 col-md-offset-0 col-lg-offset-0" ng-show="companies.editCompanyMode==true" style="margin-top:30px">
+
+                    <form class="form-horizontal">
+                    <fieldset>
+                   
+                    <div class="form-group">
+                      <label class="col-md-2 control-label" for="companyName" class="col-sm-2 control-label">Company Name</label>
+                      <div class="col-md-4">                            
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="fa fa-building-o"></i></span>
+                            <input type="text" class="form-control" id="companyName" ng-model="companies.updCompany.name" disabled placeholder="Company Name">
+                        </div>
+                      </div>
+  
+                      <label class="col-md-2 control-label" for="companyEmail" class="col-sm-2 control-label">Company Email</label>
+                      <div class="col-md-4">                            
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+                            <input type="email" class="form-control" id="companyEmail" ng-model="companies.updCompany.email"  disabled placeholder="Company Email">                                    
+                        </div>
+                      </div>
+                    </div>    
+                                        
+                    <div class="form-group">
+                      <label class="col-md-3 control-label" for="companyPoc" class="col-sm-2 control-label">Contact Person</label>
+                      <div class="col-md-9">                            
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="fa fa-user-md"></i></span>
+                            <input type="text" class="form-control" id="companyPoc" ng-model="companies.updCompany.poc"  placeholder="Contact Person">
+                        </div>
+                      </div>
+                    </div>
+                        
+                    <div class="form-group">
+                      <label class="col-md-3 col-lg-3 control-label" for="mobile">Mobile</label>  
+                      <div class="col-md-4 col-lg-4">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="fa fa-mobile"></i></span>
+                            <input type="text" class="form-control" id="mobile" ng-model="companies.updCompany.mobile" placeholder="Mobile">
+                        </div>
+                      </div>
+                      <label class="col-md-2 col-lg-1 control-label" for="phone">Phone</label>  
+                      <div class="col-md-3 col-lg-4">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="fa fa-phone"></i></span>
+                            <input type="text" class="form-control" id="phone" ng-model="companies.updCompany.phone" placeholder="Phone">
+                        </div>
+                      </div>
+                     </div>
+                        
+                    <div class="form-group">
+                      <label class="col-md-3 control-label" for="licenseNo" class="col-sm-2 control-label">License No</label>
+                      <div class="col-md-9" >                            
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="fa fa-registered"></i></span>
+                            <input type="text" class="form-control" id="licenseNo" ng-model="companies.updCompany.licenseNo" placeholder="License No">
+                        </div>
+                      </div>
+                    </div>
+                   
+                        
+                    <div class="form-group">
+                      <label class="col-md-3 control-label" for="street" class="col-sm-2 control-label">Street Address</label>
+                      <div class="col-md-9" >                            
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="fa fa-map-signs"></i></span>
+                            <input type="text" class="form-control"  id="street" ng-model="companies.updCompany.street" placeholder="Street Address">
+                        </div>
+                      </div>
+                    </div>
+                        
+                    <div class="form-group">
+                        
+                      <label class="col-md-3 col-lg-3 control-label" for="city">City</label>  
+                      <div class="col-md-4 col-lg-4">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="fa fa-map-marker"></i></span>
+                            <input type="text" class="form-control" id="city" ng-model="companies.updCompany.city" placeholder="City">
+                        </div>
+                      </div>
+                       
+                    
+                      <label class="col-md-2 col-lg-1 control-label" for="state">State</label>  
+                      <div class="col-md-3 col-lg-4">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="fa fa-map-marker"></i></span>
+                            <input type="text" class="form-control" id="state" ng-model="companies.updCompany.state" placeholder="State">
+                        </div>
+                      </div>
+                   </div>              
+
+<!--
+                    <div class="form-group">
+                      <label class="col-md-3 control-label" for="typeChoice">Company Type</label>
+                      <div class="col-md-9">
+                          
+                        <select name="typeChoice" id="typeChoice" class="form-control" ng-model="addComp.CompanyTypes.typeChoice">
+                        <option ng-repeat="option in addComp.CompanyTypes.availableOptions" value="{{option.id}}">{{option.name}} </option>
+                </select>
+                      </div>
+                    </div>
+-->
+
+                    <!-- Multiple Radios (inline) -->
+                   <div class="form-group">
+                      <label class="col-md-3 control-label" for="franchise">Franchise</label>
+                      <div class="col-md-9"> 
+                                                    
+                               <div class="checkbox">
+                                    <label>
+                                      <input type="checkbox"  id="franchise" ng-model="companies.updCompany.franchise" class="large"> Uncheck if company doesn't provide franchise service
+                                    </label>
+                               </div>
+
+                      </div>
+                    
+                   </div>
+                                    
+                           
+<!--
+                    <div class="form-group">
+                      <label class="col-md-3 control-label" for="stateChoice">Operational States</label>
+                      <div class="col-md-9">
+                        <select name="stateChoice" id="stateChoice"  class="form-control" ng-model="companies.operationalStates.stateChoice" multiple>
+                        <option ng-repeat="option in companies.operationalStates.availableStates" value="{{option.id}}">{{option.name}} </option>
+                </select>
+                      </div>
+                    </div>
+-->
+
+                      <!-- Textarea -->
+                    <div class="form-group">
+                      <label class="col-md-3 control-label" for="briefIntro">Brief Introduction</label>
+                      <div class="col-md-9">                     
+                         <textarea type="text" class="form-control" id="briefIntro" ng-model="companies.updCompany.briefIntro" placeholder="Brief Introduction"></textarea>
+                      </div>
+                    </div>
+
+                    <!-- Button (Double) -->
+                    <div class="form-group">
+                      <label class="col-md-3 control-label" for="button1id"></label>
+                      <div class="col-md-8">
+                        <button id="button1id" name="button1id" class="btn btn-success" ng-click="companies.updateCompany()">Save</button>
+                        <button id="button2id" name="button2id" class="btn btn-danger">Cancel</button>
+                      </div>
+                    </div>
+
+                    </fieldset>
+                    </form>
+                            </div>
+        
+        
+        <!-- -->
+        
+        
+        <div class="row"></div>
+        <div ng-show = "companies.companiesRes.length">
+            <H3> Search Results</H3>
+            <div class="table-responsive">
+                <table class="table table-striped" >
+                  <thead>
+                    <tr>
+                      <th>Name</th>
+                      <th>Email</th>
+                      <th>POC</th>
+                      <th>Mobile</th>
+                      <th>License No</th>
+                      <th>Company Type</th>
+                      <th>Franchise?</th>
+                      <th>Location</th>
+                      <th></th>
+                      <th></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr ng-repeat="company in companies.companiesRes">
+                      <td>{{company.name}}</td>
+                      <td>{{company.email}}</td>
+                      <td>{{company.poc}}</td>
+                      <td>{{company.mobile}}</td>
+                      <td>{{company.licenseNo}}</td>
+                      <td>{{company.companyType}}</td>
+                      <td>{{company.franchise}}</td>
+                      <td>{{company.address.city}},{{company.address.state}}</td>
+                      <td><button class="btn btn-warning" ng-click="companies.editCompany(company._id,company)"><i class="fa fa-pencil"></i></button> </td>
+                      <td><button class="btn btn-danger" ng-click="companies.deleteCompany(company._id)"><i class="fa fa-trash-o"></i> </button> </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+        </div>
+        
+               <div class="row"></div>
+ 
+        <div >
+            <H3> Recently Added Companies</H3>
+            <div class="table-responsive">
+                <table class="table table-striped" >
+                  <thead>
+                    <tr>
+                      <th>Name</th>
+                      <th>Email</th>
+                      <th>POC</th>
+                      <th>Mobile</th>
+                      <th>License No</th>
+                      <th>Company Type</th>
+                      <th>Franchise?</th>
+                      <th>Location</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr ng-repeat="company in companies.companies">
+                      <td>{{company.name}}</td>
+                      <td>{{company.email}}</td>
+                      <td>{{company.poc}}</td>
+                      <td>{{company.mobile}}</td>
+                      <td>{{company.licenseNo}}</td>
+                      <td>{{company.companyType}}</td>
+                      <td>{{company.franchise}}</td>
+                      <td>{{company.address.city}},{{company.address.state}}</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+        </div>
+
+    </div>

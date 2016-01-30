@@ -1,0 +1,232 @@
+<div class="col-sm-9 col-md-10 main">
+            <h1 class="page-header">
+            Search Products
+          </h1>
+    
+    
+    
+            <form class="form-inline">
+          <div class="form-group">
+                <label for="repeatSelect">Search By: </label>
+                <select name="repeatSelect" id="repeatSelect" class="form-control" ng-model="products.searchOptions.repeatSelect">
+                                  <option ng-repeat="option in products.searchOptions.availableOptions" value="{{option.id}}">{{option.name}} </option>
+                </select>
+          </div>
+          <div class="form-group">
+
+                <input type="text" class="form-control" id="searchCriteria" ng-model="products.searchCriteria" placeholder="searchCriteria">
+          </div class="form-group">
+
+                            <button class="btn btn-default" ng-click="products.searchProduct()" type="button"><span class="glyphicon glyphicon-search"></span>Search</button>
+          </form>
+        
+        <div ng-show="products.noData">
+            <H3> Search Results</H3>
+            <H5> No Companies matching your search were found in our database!!</H5>
+        </div>
+    
+    
+                                
+    
+    
+    <div class="row" style="margin-top:50px" >
+    
+    
+     <div class="col-xs-12 col-sm-12 col-md-9 col-lg-10  column col-sm-offset-0 col-md-offset-0 col-lg-offset-0" ng-show="products.editProductMode==true">
+                            <form class="form-horizontal">
+                            <fieldset>
+
+
+                            <div class="form-group">
+                              <label class="col-md-3 control-label" for="productName" class="col-sm-2 control-label">Product Name</label>
+                              <div class="col-md-9">                            
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="fa fa-medkit"></i></span>
+                                    <input type="text" class="form-control" id="productName" ng-model="products.updProduct.name" placeholder="Product Name" disabled>
+                                </div>
+                              </div>
+                            </div>
+
+
+                            <div class="form-group">
+                              <label class="col-md-3 control-label" for="company" class="col-sm-2 control-label">Company</label>
+                              <div class="col-md-9">                            
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="fa fa-building-o"></i></span>
+                                    <input type="text"  class="form-control" id="company" ng-model="products.updProduct.company"  placeholder="Company" disabled>
+                                </div>
+                              </div>
+                            </div>
+
+
+
+                            <div class="form-group">
+                              <label class="col-md-3 control-label" for="prodTypeChoice">Product Type</label>
+                              <div class="col-md-3">
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="fa fa-building-o"></i></span>
+                                    <input type="text"  class="form-control" id="prodTypeChoice" ng-model="products.updProduct.productType"  placeholder="Product Type" disabled>
+                                </div>
+                              </div>
+                                
+                              <label class="col-md-3 control-label" for="medicineType">Medicine Type</label>
+                              <div class="col-md-3">
+                                
+                                <div class="input-group">
+                                  <span class="input-group-addon"><i class="fa fa-building-o"></i></span>
+                                  <input type="text"  class="form-control" id="medicineType" ng-model="products.updProduct.medicineType"  placeholder="Product Type" disabled>
+                                </div>
+                                  
+                              </div>
+                            </div>
+
+
+
+                            <div class="form-group">
+                              <label class="col-md-3 control-label" for="drug" class="col-sm-2 control-label">Drug</label>
+                              <div class="col-md-3" >                            
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="fa fa-tint"></i></span>
+                                    <input type="text" class="form-control" id="drug" ng-model="products.updProduct.drug" placeholder="Drug/Molecule" disabled>
+                                </div>
+                              </div>
+
+                              <label class="col-md-3 control-label" for="drugTypeChoice">Drug Type</label>
+                              <div class="col-md-3">
+                               <div class="input-group">
+                                    <span class="input-group-addon"><i class="fa fa-tint"></i></span>
+                                    <input type="text" class="form-control" id="drug" ng-model="products.updProduct.drug" placeholder="Drug/Molecule" disabled>
+                                </div>
+                              </div>
+                            </div>
+
+
+
+
+                         <div class="form-group">
+                              <label class="col-md-3 col-lg-3 control-label" for="mobile">MRP</label>  
+                              <div class="col-md-4 col-lg-4">
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="fa fa-inr"></i></span>
+                                    <input type="text" class="form-control" id="mrp" ng-model="products.updProduct.mrp" placeholder="MRP">
+                                </div>
+                              </div>
+                              <label class="col-md-2 col-lg-1 control-label" for="phone">PTR</label>  
+                              <div class="col-md-3 col-lg-4">
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="fa fa-inr"></i></span>
+                                    <input type="text" class="form-control" id="ptr" ng-model="products.updProduct.ptr" placeholder="PTR  (Net Price)">
+                                  </div>
+                              </div>
+                             </div>
+
+                            <!-- Multiple Radios (inline) -->
+                           <div class="form-group">
+                              <label class="col-md-3 control-label" for="franchise">Franchise</label>
+                              <div class="col-md-9"> 
+
+                                       <div class="checkbox">
+                                            <label>
+                                              <input type="checkbox"  id="franchise" ng-model="products.updProduct.franchise" class="large"> Uncheck if product is not available for franchise
+                                            </label>
+                                       </div>
+
+                              </div>
+
+                           </div>
+
+
+
+
+                            <!-- Button (Double) -->
+                            <div class="form-group">
+                              <label class="col-md-3 control-label" for="button1id"></label>
+                              <div class="col-md-8">
+                                <button id="button1id" name="button1id" class="btn btn-success" ng-click="products.updateProduct()">Update</button>
+                                <button id="button2id" name="button2id" class="btn btn-danger">Clear</button>
+                              </div>
+                            </div>
+    
+    
+    </div>
+    
+    
+                                <div class="row"></div>
+    
+         
+        <div ng-show = "products.productsRes.length">
+            <H3> Search Results</H3>
+            <div class="table-responsive">
+                <table class="table table-striped" >
+                  <thead>
+                    <tr>
+                      <th>Name</th>
+                      <th>Type</th>
+                      <th>Company</th>
+                      <th>Medicine Type</th>
+                      <th>Drug</th>
+                      <th>Drug Type</th>
+                      <th>MRP</th>
+                      <th>PTR</th>
+                      <th>Franchise?</th>
+                      <th></th>
+                      <th></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr ng-repeat="product in products.productsRes">
+                      <td>{{product.name}}</td>
+                      <td>{{product.productType}}</td>
+                      <td>{{product.company}}</td>
+                      <td>{{product.medicineType}}</td>
+                      <td>{{product.drug}}</td>
+                      <td>{{product.drugType}}</td>
+                      <td>{{product.mrp}}</td>
+                      <td>{{product.ptr}}</td>
+                      <td>{{product.franchise}}</td>
+                      <td><button class="btn btn-warning" ng-click="products.editProduct(product._id,product)"><i class="fa fa-pencil"></i></button> </td>
+                      <td><button class="btn btn-danger" ng-click="products.deleteProduct(product._id)"><i class="fa fa-trash-o"></i> </button> </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+        </div>
+        
+                                <div class="row"></div>
+                                
+        <div>
+            
+            <H3> Recently Added Products</H3>
+            <div class="table-responsive">
+                <table class="table table-striped" >
+                  <thead>
+                    <tr>
+                      <th>Name</th>
+                      <th>Type</th>
+                      <th>Company</th>
+                      <th>Medicine Type</th>
+                      <th>Drug</th>
+                      <th>Drug Type</th>
+                      <th>MRP</th>
+                      <th>PTR</th>
+                      <th>Franchise?</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr ng-repeat="product in products.products">
+                      <td>{{product.name}}</td>
+                      <td>{{product.productType}}</td>
+                      <td>{{product.company}}</td>
+                      <td>{{product.medicineType}}</td>
+                      <td>{{product.drug}}</td>
+                      <td>{{product.drugType}}</td>
+                      <td>{{product.mrp}}</td>
+                      <td>{{product.ptr}}</td>
+                      <td>{{product.franchise}}</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+        </div>
+    
+</div>

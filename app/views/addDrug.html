@@ -1,0 +1,57 @@
+    <div class="col-sm-9 col-md-10 main">
+
+                <h1 class="page-header"> Add Drug </h1>
+        
+                    <h4>{{addDrugs.confirmMessage}}</h4>
+
+                    <div class="container">
+                        <div class="row clearfix">
+
+                            <div class="col-xs-12 col-sm-12 col-md-9 col-lg-10  column col-sm-offset-0 col-md-offset-0 col-lg-offset-0">
+
+                    <form class="form-horizontal">
+                    <fieldset>
+                        
+                        
+                    <div class="form-group">
+                      <label class="col-md-3 control-label" for="drugName" class="col-sm-2 control-label">Drug Name</label>
+                      <div class="col-md-9">                            
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="fa fa-tags"></i></i></span>
+                            <input type="text" class="form-control" id="drugName" ng-model="addDrugs.newDrug.name" placeholder="Drug Name">
+                        </div>
+                      </div>
+                    </div>
+                                  
+
+                    <div class="form-group">
+                      <label class="col-md-3 control-label" for="typeChoice">Drug Type</label>
+                      <div class="col-md-9">
+                          
+                        <select name="typeChoice" id="typeChoice" class="form-control" ng-model="addDrugs.DrugTypes.typeChoice">
+                        <option ng-repeat="option in addDrugs.DrugTypes.availableOptions" value="{{option.id}}">{{option.name}} </option>
+                </select>
+                      </div>
+                    </div>
+
+
+                    <!-- Button (Double) -->
+                    <div class="form-group">
+                      <label class="col-md-3 control-label" for="button1id"></label>
+                      <div class="col-md-8">
+                        <button id="button1id" name="button1id" class="btn btn-success" ng-click="addDrugs.createDrug()">Save</button>
+                        <button id="button2id" name="button2id" class="btn btn-danger">Clear</button>
+                      </div>
+                    </div>
+
+                    </fieldset>
+                    </form>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+
+
+    </div>

@@ -1,0 +1,102 @@
+    <style>
+
+        .chart {
+         width: 400px;
+         height: 400px;
+        }
+        
+        .ac-tooltip {
+             color: black;
+             border: 2px solid rgba(200,200,0,0.8);
+             background-color: rgba(245,234,240,0.5);
+         }
+ 
++        .ac-legend-box {
++            border-radius: 10px;
++        }
+
+    </style>       
+               
+          <!--- Bhai ye kaat-->
+          
+          
+          
+        <div class="col-sm-9 col-md-10 main">
+          
+          <!--toggle sidebar button-->
+          <p class="visible-xs">
+            <button type="button" class="btn btn-primary btn-xs" data-toggle="offcanvas"><i class="glyphicon glyphicon-chevron-left"></i></button>
+          </p>
+          
+		  <h1 class="page-header">
+            Dashboard
+          </h1>
+
+            
+        <div class="row placeholders">
+            <div class="col-xs-6 col-sm-3 placeholder text-center">
+                <a href="/companies">
+                <button class="btn btn-primary btn-lg btn-xlarge" type="button" >
+                    <i class="fa fa-building-o"></i>
+                      Companies <span class="badge dash-badge">{{home.companiesCount}}</span>
+                </button> </a>
+
+            </div>
+            <div class="col-xs-6 col-sm-3 placeholder text-center">
+                <a href="/products">
+                <button class="btn btn-success btn-lg btn-xlarge" type="button">
+                    <i class="fa fa-shopping-bag"></i>
+                      Products <span class="badge dash-badge">{{home.productsCount}}</span>
+                    </button> </a>
+
+            </div>
+            <div class="col-xs-6 col-sm-3 placeholder text-center">
+                <a href="/drugs">
+                <button class="btn btn-danger btn-lg btn-xlarge" type="button">
+                    <i class="fa fa-plus-square fa-spin"></i>
+                      Drugs <span class="badge dash-badge">{{home.drugsCount}}</span>
+                    </button></a>
+
+            </div>
+            <div class="col-xs-6 col-sm-3 placeholder text-center">
+                <button class="btn btn-warning btn-lg btn-xlarge" type="button">
+                    <i class="fa fa-users"></i>
+                      Users <span class="badge dash-badge">{{home.usersCount}}</span>
+                </button>
+
+            </div>
+
+          </div>
+            
+            
+          
+          <hr>
+            
+            <div class="col-xs-12 col-sm-12 col-md-9 col-lg-10  column col-sm-offset-0 col-md-offset-0 col-lg-offset-0">
+            
+                <div class="col-md-6" >
+                
+                            <div ac-chart="home.chartType" ac-data="home.data" ac-config="home.pieConfig" id='chart' class='chart'></div>
+                </div>
+            
+                <div class="col-md-6" ng-show="home.drugsCount">
+                
+                            <div ac-chart="'bar'" ac-data="home.statData" ac-config="home.barConfig" id='chart' class='chart'></div>
+                </div>
+
+                
+            </div>
+
+        
+            
+
+          
+      </div><!--/row-->
+
+            
+
+
+
+
+ <!--- Bhai ye kaat-->
+

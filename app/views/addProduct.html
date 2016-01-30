@@ -1,0 +1,278 @@
+    <style>
+    .selected {
+        background-color:cornflowerblue;
+        color:white;
+        font-weight:bold;
+    }
+    </style>
+
+            <div class="col-sm-9 col-md-10 main">
+
+                        <h1 class="page-header"> Add Product </h1>
+
+                            <h4>{{addProd.confirmMessage}}</h4>
+
+                            <div class="container">
+                                <div class="row clearfix">
+                                    <div class="col-xs-12 col-sm-12 col-md-9 col-lg-10  column col-sm-offset-0 col-md-offset-0 col-lg-offset-0">
+                            <form class="form-horizontal">
+                            <fieldset>
+
+
+                            <div class="form-group">
+                              <label class="col-md-3 control-label" for="productName" class="col-sm-2 control-label">Product Name</label>
+                              <div class="col-md-9">                            
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="fa fa-medkit"></i></span>
+                                    <input type="text" class="form-control" id="productName" ng-model="addProd.newProduct.name" placeholder="Product Name">
+                                </div>
+                              </div>
+                            </div>
+
+
+                            <div class="form-group">
+                              <label class="col-md-3 control-label" for="company" class="col-sm-2 control-label">Company</label>
+                              <div class="col-md-7">                            
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="fa fa-building-o"></i></span>
+                                    <input type="text"  class="form-control" id="company" ng-model="addProd.newProduct.company"  placeholder="Company" disabled>
+                                </div>
+                              </div>
+                              <div class="col-md-2">
+                                <button type="button" class="btn btn-info " data-toggle="modal" data-target="#selectCompanyModal">Browse Companies</button>
+                              </div>
+                            </div>
+
+
+
+                            <div class="form-group">
+                              <label class="col-md-3 control-label" for="prodTypeChoice">Product Type</label>
+                              <div class="col-md-9">
+
+                                <select name="typeChoice" id="prodTypeChoice" class="form-control" ng-model="addProd.ProductTypes.prodTypeChoice">
+                                <option ng-repeat="option in addProd.ProductTypes.availableOptions" value="{{option.id}}">{{option.name}} </option>
+                        </select>
+                              </div>
+                            </div>
+
+                            <div class="form-group">
+                              <label class="col-md-3 control-label" for="medTypeChoice">Medicine Type</label>
+                              <div class="col-md-9">
+                                <select name="typeChoice" id="medTypeChoice" class="form-control" ng-model="addProd.MedicineTypes.medTypeChoice">
+                                <option ng-repeat="option in addProd.MedicineTypes.availableOptions" value="{{option.id}}">{{option.name}} </option>
+                        </select>
+                              </div>
+                            </div>
+
+
+
+                            <div class="form-group">
+                              <label class="col-md-3 control-label" for="drug" class="col-sm-2 control-label">Drug</label>
+                              <div class="col-md-7" >                            
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="fa fa-tint"></i></span>
+                                    <input type="text" class="form-control" id="drug" ng-model="addProd.newProduct.drug" placeholder="Drug/Molecule" disabled>
+                                </div>
+                              </div>
+                            <div class="col-md-2">
+                                <button type="button" class="btn btn-info " data-toggle="modal" data-target="#selectDrugModal">Browse Drugs</button>
+                              </div>
+                            </div>
+
+                            <div class="form-group">
+                              <label class="col-md-3 control-label" for="drugTypeChoice">Drug Type</label>
+                              <div class="col-md-9">
+                                <select name="typeChoice" id="drugTypeChoice" class="form-control" ng-model="addProd.DrugTypes.drugTypeChoice">
+                                <option ng-repeat="option in addProd.DrugTypes.availableOptions" value="{{option.id}}">{{option.name}} </option>
+                        </select>
+                              </div>
+                            </div>
+
+
+
+
+                         <div class="form-group">
+                              <label class="col-md-3 col-lg-3 control-label" for="mobile">MRP</label>  
+                              <div class="col-md-4 col-lg-4">
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="fa fa-inr"></i></span>
+                                    <input type="text" class="form-control" id="mrp" ng-model="addProd.newProduct.mrp" placeholder="MRP">
+                                </div>
+                              </div>
+                              <label class="col-md-2 col-lg-1 control-label" for="phone">PTR</label>  
+                              <div class="col-md-3 col-lg-4">
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="fa fa-inr"></i></span>
+                                    <input type="text" class="form-control" id="ptr" ng-model="addProd.newProduct.ptr" placeholder="PTR  (Net Price)">
+                                  </div>
+                              </div>
+                             </div>
+
+                            <!-- Multiple Radios (inline) -->
+                           <div class="form-group">
+                              <label class="col-md-3 control-label" for="franchise">Franchise</label>
+                              <div class="col-md-9"> 
+
+                                       <div class="checkbox">
+                                            <label>
+                                              <input type="checkbox"  id="franchise" ng-model="addProd.newProduct.franchise" class="large"> Uncheck if product is not available for franchise
+                                            </label>
+                                       </div>
+
+                              </div>
+
+                           </div>
+
+
+                            <div class="form-group">
+                              <label class="col-md-3 control-label" for="stateChoice">Available in States</label>
+                              <div class="col-md-9">
+                                <select name="stateChoice" id="stateChoice"  class="form-control" ng-model="addProd.operationalStates.stateChoice" multiple>
+                                <option ng-repeat="option in addProd.operationalStates.availableStates" value="{{option.id}}">{{option.name}} </option>
+                        </select>
+                              </div>
+                            </div>
+
+
+                            <!-- Button (Double) -->
+                            <div class="form-group">
+                              <label class="col-md-3 control-label" for="button1id"></label>
+                              <div class="col-md-8">
+                                <button id="button1id" name="button1id" class="btn btn-success" ng-click="addProd.createProduct()">Save</button>
+                                <button id="button2id" name="button2id" class="btn btn-danger">Clear</button>
+                              </div>
+                            </div>
+
+         <div class="modal fade" id="selectCompanyModal" role="dialog">
+            <div class="modal-dialog modal-lg">
+
+              <!-- Modal content-->
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  <h4 class="modal-title">Select Company</h4>
+                </div>
+                  <form>
+                <div class="modal-body">
+
+
+
+                        <div class="form-group">
+                          <label class="col-md-4 control-label" for="companyName">Enter Company Name</label>
+                          <div class="col-md-6">                            
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="fa fa-building-o"></i></span>
+                                <input type="text" class="form-control" id="companyName" ng-model="addProd.modalCompanyName" placeholder="Company Name">
+                            </div>
+                          </div>
+                          <div class="col-md-2">          
+                           <button class="btn btn-default" ng-click="addProd.modalGetComp()" type="button"><span class="glyphicon glyphicon-search"></span> Search</button>
+                            </div>
+                        </div>
+                    <div ng-show="!addProd.lookupCompanies.length">
+
+                        <h4> Any matching company was not found. Please add the same first.</h4>
+
+                    </div>
+                    <div class="table-responsive" ng-show="addProd.lookupCompanies.length">
+                    <table class="table" >
+                      <thead>
+                        <tr>
+                          <th>#</th>
+                          <th>Name</th>
+                          <th>Email</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+
+                        <tr ng-repeat="company in addProd.lookupCompanies" ng-class="{'selected':$index == addProd.selectedRow}"  ng-click="addProd.selectLookupComp(company.name,$index)">
+                          <td>{{$index}}</td>
+                          <td>{{company.name}}</td>
+                          <td>{{company.email}}</td>
+                        </tr>
+
+                      </tbody>
+                    </table>
+                  </div>      
+                </div>
+
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+                      </form>
+              </div>
+
+            </div>
+          </div>
+                
+                                
+        
+         <div class="modal fade" id="selectDrugModal" role="dialog">
+            <div class="modal-dialog modal-lg">
+
+              <!-- Modal content-->
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  <h4 class="modal-title">Select Drug</h4>
+                </div>
+                  <form>
+                <div class="modal-body">
+
+
+
+                        <div class="form-group">
+                          <label class="col-md-4 control-label" for="drugName">Enter Drug Name</label>
+                          <div class="col-md-6">                            
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="fa fa-tint"></i></i></span>
+                                <input type="text" class="form-control" id="drugName" ng-model="addProd.modalDrugName" placeholder="Drug Name">
+                            </div>
+                          </div>
+                          <div class="col-md-2">          
+                           <button class="btn btn-default" ng-click="addProd.modalGetDrug()" type="button"><span class="glyphicon glyphicon-search"></span> Search</button>
+                            </div>
+                        </div>
+                    <div ng-show="!addProd.lookupDrugs.length">
+
+                        <h4> Any matching drug was not found. Please add the same first.</h4>
+
+                    </div>
+                    <div class="table-responsive" ng-show="addProd.lookupDrugs.length">
+                    <table class="table" >
+                      <thead>
+                        <tr>
+                          <th>#</th>
+                          <th>Name</th>
+                          <th>Email</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+
+                        <tr ng-repeat="drug in addProd.lookupDrugs" ng-class="{'selected':$index == addProd.selectedDrugRow}"  ng-click="addProd.selectLookupDrug(drug.name,$index)">
+                          <td>{{$index}}</td>
+                          <td>{{drug.name}}</td>
+                          <td>{{drug.drugType}}</td>
+                        </tr>
+
+                      </tbody>
+                    </table>
+                  </div>      
+                </div>
+
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+                      </form>
+              </div>
+
+            </div>
+          </div>
+              
+                                
+        </fieldset>
+       </form>
+    </div>
+   </div>
+  </div>
+</div>
