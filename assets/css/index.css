@@ -1,11 +1,105 @@
 
+
+body, html{
+        font-family: Open Sans,'Helvetica Neue',Arial,sans-serif;
+        overflow-x:hidden;
+        overflow-y:scroll;
+    }
+
+    #tab1{
+    position: absolute;
+    width:200px;
+    height:50px;
+    top:  500px;
+    left: 200px;
+    color: white;
+    z-index: 10;
+    border-radius: 6px;
+    cursor: pointer;
+    line-height: 95px;
+    text-align: center;
+    background: #2db34a;
+    transition-property: background;
+    transition-duration: 1s;
+    transition-timing-function: linear;
+}
+#tab1:hover {
+  background: #ff7b29;
+  color: white;
+}
+
+   #tab2{
+    position:absolute;
+    width:200px;
+    height:50px;
+    top: 500px;
+    left: 450px;
+    color: white;
+    z-index: 3;
+    border-radius: 6px;
+    cursor: pointer;
+    line-height: 95px;
+    text-align: center;
+    background: #2db34a;
+    transition-property: background;
+    transition-duration: 1s;
+    transition-timing-function: linear;
+}
+#tab2:hover {
+  background: #ff7b29;
+}
+   #tab3{
+    position: absolute;
+    width:200px;
+    height:50px;
+    top: 500px;
+    left: 700px;
+    color: white;
+    z-index: 3;
+    border-radius: 6px;
+    cursor: pointer;
+    line-height: 95px;
+    text-align: center;
+    background: #2db34a;
+    transition-property: background;
+    transition-duration: 1s;
+    transition-timing-function: linear;
+}
+#tab3:hover {
+  background: #ff7b29;
+}
+   #tab4{
+    position: absolute;
+    width:200px;
+    height: 50px;
+    top: 500px;
+    left: 950px;
+    color: white;
+    z-index: 3;
+    border-radius: 6px;
+    cursor: pointer;
+    line-height: 95px;
+    text-align: center;
+    background: #2db34a;
+    transition-property: background;
+    transition-duration: 1s;
+    transition-timing-function: linear;
+}
+#tab4:hover {
+  background: #ff7b29;
+}
+
+   #tab1:hover{
+       color: white;
+   }
 .navbar{
+  height: 70px;
   background-color:#F7F7F7;
   z-index: 1;
 }
 #navbarCollapse{
 	position: relative;
-	left: -100px;
+	left: 0px;
 }
 .nav {
   padding-left:0px;
@@ -22,7 +116,7 @@
   position: relative;
   display: block;
   outline: 0;
-  padding: 10px 25px;
+  padding: 15px 25px;
   font-size: 14px;
   font-weight: 600;
   line-height: 20px;
@@ -33,7 +127,7 @@
   text-decoration: none;
   background-color: #eee;
 }
-#button{
+/*#button{
 	position: relative;
 	background-color:#3FC4FC;
 	border-radius: 7px; 
@@ -43,7 +137,7 @@
   padding-top:3px;
   text-align: center;
 	outline: 0;
-}
+}*/
 
 /*.nav > li.disabled > a {
   color: #777;
@@ -100,3 +194,53 @@ background-color: black;
 -webkit-border-radius: 10px;
 border-radius: 10px;
 }*/
+
+
+.section-a {
+    padding: 50px 0;
+    background-color: #f8f8f8;
+}
+
+.section-b {
+    padding: 50px 0;
+    border-top: 1px solid #e7e7e7;
+    border-bottom: 1px solid #e7e7e7;
+}
+.hideall{
+  display: none;
+}
+#img1{
+  position: absolute;
+  top:10px;
+  width: 200px;
+}
+.fig1{
+  
+}
+.carousel-inner > .item > img,
+  .carousel-inner > .item > a > img {
+      width: 100%;
+      margin: auto;
+  }
+
+  .carousel {
+  height: 600px;
+  margin-bottom: 60px;
+}
+/* Since positioning the image, we need to help out the caption */
+.carousel-caption {
+  z-index: 10;
+}
+
+/* Declare heights because of positioning of img element */
+.carousel .item {
+  height: 600px;
+  background-color: #777;
+}
+.carousel-inner > .item > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  height: 600px;
+}
