@@ -87,3 +87,65 @@ $(document).ready(function(){
 
   });
 //==================================================================
+$(document).ready(function(){
+ $("#tab").hover(function(){
+   $("this").css({"background":"#ff7b29"});
+  });
+   
+ $("#tab2").hover(function(){
+   $("this").css({"background":"#ff7b29"});
+  });
+
+ $("#tab3").hover(function(){
+   $("this").css({"background":"#ff7b29"});
+  });
+
+ $(".tab4").hover(function(){
+   $("this").css({"background":"#ff7b29"});
+  });
+
+});
+
+$(document).ready(function(){
+$("#tab").css({"width":"150px","height":"50px","background-color":"#ff7b29"});
+});
+
+$(document).ready(function(){
+  $("#tab").click(function(){
+    $("#tab").css({"width":"150px","height":"50px","background-color":"#ff7b29","margin-right":"20px","margin-bottom":"20px"});
+    $("#tab2").css({"width":"150px","height":"50px","background-color":"#2F4F4F"});
+    $("#tab3").css({"width":"150px","height":"50px","background-color":"#2F4F4F"});
+    $("#tab4").css({"width":"150px","height":"50px","background-color":"#2F4F4F"});
+    $("#imgtext").text("this is some text from image one");
+});
+});  
+
+$(document).ready(function(){
+  $("#tab2").click(function(){
+    $("#tab2").css({"width":"150px","height":"50px","background-color":"#ff7b29","margin-right":"20px","margin-bottom":"20px"});
+    $("#tab").css({"width":"150px","height":"50px","background-color":"#2F4F4F"});
+    $("#tab3").css({"width":"150px","height":"50px","background-color":"#2F4F4F"});
+    $("#tab4").css({"width":"150px","height":"50px","background-color":"#2F4F4F"});
+    $("#imgtext").text("text for image two");
+});
+});
+
+$(document).ready(function(){
+  $("#tab3").click(function(){
+    $("#tab3").css({"width":"150px","height":"50px","background-color":"#ff7b29","margin-right":"20px","margin-bottom":"20px"});
+    $("#tab2").css({"width":"150px","height":"50px","background-color":"#2F4F4F"});
+    $("#tab").css({"width":"150px","height":"50px","background-color":"#2F4F4F"});
+    $("#tab4").css({"width":"150px","height":"50px","background-color":"#2F4F4F"});
+    $("#imgtext").text("text for image three");
+});
+});
+
+$(document).ready(function(){
+  $("#tab4").click(function(){
+    $("#tab4").css({"width":"150px","height":"50px","background-color":"#ff7b29","margin-right":"20px","margin-bottom":"20px"});
+    $("#tab2").css({"width":"150px","height":"50px","background-color":"#2F4F4F"});
+    $("#tab3").css({"width":"150px","height":"50px","background-color":"#2F4F4F"});
+    $("#tab").css({"width":"150px","height":"50px","background-color":"#2F4F4F"});
+    $("#imgtext").text("text for image four");
+});
+});

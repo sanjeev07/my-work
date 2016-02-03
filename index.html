@@ -10,6 +10,8 @@
     <link href="assets/css/responsive.css" rel="stylesheet">
         <link href="assets/css/bootstrap.offcanvas.min.css" rel="stylesheet">
         <link href="assets/css/index.css" rel="stylesheet">
+        <!--<link href="assets/css/default.css" rel="stylesheet">-->
+        <link href="assets/css/component.css" rel="stylesheet">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
         <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,300' rel='stylesheet' type='text/css'>
 <style type="text/css">
@@ -71,25 +73,36 @@
 </nav>
 </header>
   <div id="myCarousel" class="carousel slide" data-ride="carousel">
+
+<div class="col-lg-7 col-lg-offset-2"id="check">
+  <p id="imgtext" style="font-size:18px; color: white;">this is some text from image one</p>
+<div id="sb-search" class="sb-search ">
+  <form>
+    <input class="sb-search-input" placeholder="Enter your search term..." type="search" value="" name="search" id="search">
+    <input class="sb-search-submit" type="submit" value="">
+    <span class="sb-icon-search"></span>
+  </form>
+ </div>
+</div>
   <!-- Indicators -->
-  <div class="carousel-indicators"> 
-    <div id="tab1" data-target="#myCarousel" data-slide-to="0" class="active col-lg-3">
-          <h2 style="color:white;font-size:16px;font-weight: 400; line-height: 20px;
-                text-align: center;"> click for slide1</h2>
-  </div>
-    <div id="tab2" data-target="#myCarousel" data-slide-to="1" class="col-lg-3">
-       <h2 style="color:white;font-size:16px;font-weight: 400; line-height: 20px;
-                text-align: center;"> click for slide2</h2>
-  </div>
-    <div id="tab3" data-target="#myCarousel" data-slide-to="2" class="col-lg-3"> 
-           <h2 style="color:white;font-size:16px;font-weight: 400; line-height: 20px;
-                text-align: center;"> click for slide3</h2>
-  </div>
-  <div id="tab4"data-target="#myCarousel" data-slide-to="3" class="col-lg-3">
-              <h2 style="color:white;font-size:16px;font-weight: 400; line-height: 20px;
-                text-align: center;"> click for slide4</h2>
-  </div>  
-  </div>
+  <div class="carousel-indicators">         
+            <div class="col-lg-3 tab1" id="tab" data-target="#myCarousel" data-slide-to="0">
+                  <h2 style="color:white;font-size:16px;font-weight: 400; line-height: 20px;
+                  text-align: center;"> click for slide1</h2>
+            </div>
+            <div class="col-lg-3 tab1"id="tab2" data-target="#myCarousel" data-slide-to="1">
+                    <h2 style="color:white;font-size:16px;font-weight: 400; line-height: 20px;
+                    text-align: center;"> click for slide2</h2>
+            </div>    
+            <div class="col-lg-3 tab1" id="tab3" data-target="#myCarousel" data-slide-to="2"> 
+                    <h2 style="color:white;font-size:16px;font-weight: 400; line-height: 20px;
+                    text-align: center;"> click for slide3</h2>
+            </div>  
+            <div class="col-lg-3 tab1" id="tab4"data-target="#myCarousel" data-slide-to="3">
+                    <h2 style="color:white;font-size:16px;font-weight: 400; line-height: 20px;
+                    text-align: center;"> click for slide4</h2>
+            </div>     
+  </div>     
   <div class="carousel-inner" role="listbox">
     <div class="item active">
       <img class="first-slide" src="assets\images\download-4.jpg" alt="First slide">
@@ -143,6 +156,9 @@
   </a>-->
 </div><!-- /.carousel -->
 
+<div class="section-a" style="height: 400px;">
+  </div>
+
         <script type="text/javascript" src="assets/js/jquery.min.js"></script>
         <script type="text/javascript" src="assets/js/bootstrap.offcanvas.js"></script>
         <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
@@ -151,10 +167,11 @@
           <script type="text/javascript" src="assets/js/jquery.nicescroll.plus.js"></script>
         <script type="text/javascript" src="//wurfl.io/wurfl.js"></script>
         <script type="text/javascript" src="assets/js/index.js"></script>  
-
-
+        <script type="text/javascript" src="assets/js/classie.js"></script>
+        <script type="text/javascript" src="assets/js/uisearch.js"></script>
+        <script type="text/javascript" src="assets/js/modernizr.custom.js"></script>
    <script type="text/javascript">
-  
+      new UISearch( document.getElementById( 'sb-search' ) );
 </script>      
 </body>
 </html>
