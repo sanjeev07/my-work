@@ -116,7 +116,7 @@ $(document).ready(function(){
     $("#tab2").css({"background-color":"#2F4F4F"});
     $("#tab3").css({"background-color":"#2F4F4F"});
     $("#tab4").css({"background-color":"#2F4F4F"});
-    $("#imgtext").text("");
+
 });
 });  
 
@@ -126,7 +126,6 @@ $(document).ready(function(){
     $("#tab").css({"background-color":"#2F4F4F"});
     $("#tab3").css({"background-color":"#2F4F4F"});
     $("#tab4").css({"background-color":"#2F4F4F"});
-    $("#imgtext").text("");
 });
 });
 
@@ -136,7 +135,6 @@ $(document).ready(function(){
     $("#tab2").css({"background-color":"#2F4F4F"});
     $("#tab").css({"background-color":"#2F4F4F"});
     $("#tab4").css({"background-color":"#2F4F4F"});
-    $("#imgtext").text("");
 });
 });
 
@@ -146,6 +144,6 @@ $(document).ready(function(){
     $("#tab2").css({"background-color":"#2F4F4F"});
     $("#tab3").css({"background-color":"#2F4F4F"});
     $("#tab").css({"background-color":"#2F4F4F"});
-    $("#imgtext").text("");
 });
 });
+
