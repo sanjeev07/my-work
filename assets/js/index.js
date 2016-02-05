@@ -116,7 +116,7 @@ $(document).ready(function(){
     $("#tab2").css({"background-color":"#2F4F4F"});
     $("#tab3").css({"background-color":"#2F4F4F"});
     $("#tab4").css({"background-color":"#2F4F4F"});
-    $("#imgtext").text("this is some text from image one");
+    $("#imgtext").text("");
 });
 });  
 
@@ -126,7 +126,7 @@ $(document).ready(function(){
     $("#tab").css({"background-color":"#2F4F4F"});
     $("#tab3").css({"background-color":"#2F4F4F"});
     $("#tab4").css({"background-color":"#2F4F4F"});
-    $("#imgtext").text("text for image two");
+    $("#imgtext").text("");
 });
 });
 
@@ -136,7 +136,7 @@ $(document).ready(function(){
     $("#tab2").css({"background-color":"#2F4F4F"});
     $("#tab").css({"background-color":"#2F4F4F"});
     $("#tab4").css({"background-color":"#2F4F4F"});
-    $("#imgtext").text("text for image three");
+    $("#imgtext").text("");
 });
 });
 
@@ -146,6 +146,6 @@ $(document).ready(function(){
     $("#tab2").css({"background-color":"#2F4F4F"});
     $("#tab3").css({"background-color":"#2F4F4F"});
     $("#tab").css({"background-color":"#2F4F4F"});
-    $("#imgtext").text("text for image four");
+    $("#imgtext").text("");
 });
 });
