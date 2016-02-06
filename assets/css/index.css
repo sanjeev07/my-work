@@ -147,19 +147,19 @@ body, html{
   }
 
   #arrowback:hover{
-    -webkit-animation-name: arrowmove; /* Chrome, Safari, Opera */
-    -moz-animation-name: arrowmove;
-    -webkit-animation-duration: 0.8s; /* Chrome, Safari, Opera */
-    -moz-animation-duration: 0.8s;
-    animation-name: arrowmove;
-    animation-duration:0.8s;
-    animation-timing-function: ease-in-out;
-    -webkit-animation-iteration-count: infinite; /* Chrome, Safari, Opera */
+    -webkit-animation-name: arrowbackmove; 
+    -moz-animation-name: arrowbackmove;
+    -webkit-animation-duration: 2s; 
+    -moz-animation-duration: 2s;
+    animation-name: arrowbackmove;
+    animation-duration:2s;
+    animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite; 
     animation-iteration-count: infinite;
 
 }
 
 @keyframes arrowbackmove{
-    50%  {right: 20px;}
+    50%  {right: 10px;}
     100% {right: 25px;}
   }
