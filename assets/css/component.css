@@ -36,19 +36,19 @@
 }
 
 .sb-search-input::-webkit-input-placeholder {
-	color: #efb480;
+	color: #DA5135;
 }
 
 .sb-search-input:-moz-placeholder {
-	color: #efb480;
+	color: #DA5135;
 }
 
 .sb-search-input::-moz-placeholder {
-	color: #efb480;
+	color: #DA5135;
 }
 
 .sb-search-input:-ms-input-placeholder {
-	color: #efb480;
+  color:#DA5135;
 }
 
 .sb-icon-search,
@@ -79,7 +79,7 @@
 
 .sb-icon-search {
 	color: #fff;
-	background: #e67e22;
+	background: #C25858;
 	z-index: 90;
 	font-size: 22px;
 	font-family: 'icomoon';
