@@ -163,3 +163,91 @@ body, html{
     50%  {right: 10px;}
     100% {right: 25px;}
   }
+
+  #clickone{
+        font-size: 15px;
+        color:RGB(52, 175, 209);
+        position:absolute;
+        left: 90px;
+        cursor:pointer;
+        text-decoration:none;  
+        font-weight: bold;
+
+    }
+    
+    #clicktwo{
+        font-size:15px;
+        color:RGB(52, 175, 209);
+        position: absolute;
+        left: 100px;
+        cursor:pointer;
+        text-decoration:none;  
+        font-weight: bold;
+
+    }
+    #login-account{
+        width: 400px;
+        outline: none;
+        border:hidden;
+        position: relative;
+        left: 10px;
+        font-weight:600;
+    }
+    #create-account{
+        width: 400px;
+        outline: none;
+        border:hidden;
+        position: relative;
+        left: 10px;
+        font-weight:600;
+    }
+    #signin{
+        width:301px;
+        height:35px;
+        position: absolute;
+        /*border-right: 1px ridge rgb(52, 175, 209);*/ 
+        /*transition-property: border-bottom;
+        transition-duration: 0.5s;
+        transition-timing-function: linear;*/
+    }
+    #signup{
+        width:260px;
+        height:35px;
+        position: absolute;
+        left:315px;
+    }
+    /*#signin:hover{
+        border-bottom: 4px ridge #cb7602;
+        border-right: 2px solid white; 
+    }
+    #signup:hover{
+        border-bottom: 4px ridge #cb7602;
+        border-left: 2px solid white;
+        
+
+    }*/
+
+
+.cmn-t-underline{
+  position: absolute;
+}
+.cmn-t-underline:after {
+  display: block;
+  position: absolute;
+  left: 0;
+  top : 33px;
+  width: 0;
+  height: 3px;
+  background-color: #52AFD1;
+  content: "";
+  transition: width 0.2s;
+}
+.cmn-t-underline:hover {
+  color: #52AFD1;
+}
+.active{
+  border-bottom: 2px solid #98004a;
+}
+.cmn-t-underline:hover:after {
+  width: 100%;
+}

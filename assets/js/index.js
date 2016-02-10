@@ -205,5 +205,38 @@ $(document).ready(function(){
     $("#arrow").removeClass("hideall");
     $("#arrowback").addClass("hideall");
     $("#arrow").css({"top":"-180px","left":"10px"});
+    $("#tab").css({"background-color":"#C25858"});
+    $("#tab2").css({"background-color":"#2F4F4F"});
+    $("#tab3").css({"background-color":"#2F4F4F"});
+    $("#tab4").css({"background-color":"#2F4F4F"});
+    $("#advsearch").removeClass("hideall");
+    $(".change").addClass("hideall");
   });
+});
+
+//========================================================================================
+
+$(document).ready(function(){
+$(".link7").click(function(){
+$("#modaldiv1").removeClass("hideall");
+$("#modaldiv2").addClass("hideall");
+$("#signin").addClass("active");
+$("#signup").removeClass("active");
+});
+});
+$(document).ready(function(){
+$("#clicktwo").click(function(){
+$("#modaldiv1").addClass("hideall");
+$("#modaldiv2").removeClass("hideall");
+$("#signup").addClass("active");
+$("#signin").removeClass("active");
+});
+});
+$(document).ready(function(){
+$("#clickone").click(function(){
+$("#modaldiv1").removeClass("hideall");
+$("#modaldiv2").addClass("hideall");
+$("#signin").addClass("active");
+$("#signup").removeClass("active");
+});
 });
