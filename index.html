@@ -77,69 +77,101 @@
         <div class="modal-content">
           <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span >&times;</span></button>
-            <div id="signin" class="cmn-t-underline col-lg-2 active">
-            <p class="modal-title" id="clickone">SIGN-IN</p>
+            <div class="container">
+                  <div id="signin" class="cmn-t-underline active col-lg-2 col-xs-6">
+                      <p class="modal-title" id="clickone">SIGN IN</p>
+                  </div>
+                  <div id="signup" class="cmn-t-underline col-lg-2 col-xs-6 col-lg-offset-1">
+                      <p class="modal-title pull-center" id="clicktwo">SIGN UP</p>
+                  </div>
             </div>
-            <div id="signup" class="cmn-t-underline col-lg-2">
-            <p class="modal-title" id="clicktwo">SIGN-UP</p>
-            </div>
-            <br>
           </div>
           <div id="modaldiv1" class="">
           <div class="modal-body">
             <form class="col-lg-offset-2">
-                <div class="input-group col-lg-10">
+                <div class="input-group col-xs-10 col-lg-10">
                     <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
                     <input type="useremail" id="emailid" class="form-control" placeholder="Enter Your mail Id">
                 </div>
                 <br>
-                <div class="input-group col-lg-10">
+                <div class="input-group col-xs-10 col-lg-10">
                     <span class="input-group-addon"><i class="fa fa-key"></i></span>
                     <input id="userpassword" type="password" class="form-control" placeholder="Password">
                 </div>
                 <div class="checkbox">
                     <label><input type="checkbox"> Remember me</label>
+                </div>
+                <div>
+                    <a class="pull-right" id="user-forgotten-password" href="#">Forgot password?</a>
                 </div>    
             </form>
          </div>
             <div class="modal-footer">
-                 <button id ="login-account" type="button" class="btn btn-success center-block">SIGN-IN</button>
+                 <button id ="login-account" type="button" class="btn btn-success col-lg-8 col-xs-8 col-lg-offset-2 col-xs-offset-2">SIGN IN</button>
             </div>
          </div>          
 <!-- second modal body -->
             <div id="modaldiv2" class="hideall">
             <div class="modal-body">
             <form class="col-lg-offset-2">
-                <div class="input-group col-lg-10">
+                <div class="input-group col-xs-10 col-lg-10">
                     <span class="input-group-addon"><i class="fa fa-user"></i></span>
                     <input type="text" id="input-user-name" class="form-control" placeholder="Your Full name">
                 </div>
-                <br>
-                <div class="input-group col-lg-10">
-                    <span class="input-group-addon"><i class="fa fa-mobile"></i></span>
+                <p class="bg-warning"></p>
+                <div class="input-group col-xs-10 col-lg-10">
+                    <span class="input-group-addon">+91</span>
                     <input type="text" id="input-contact-no" class="form-control" placeholder="Your Contact No">
                 </div>
-                <br>
-                <div class="input-group col-lg-10">
+                <p class="bg-warning"></p>
+                <div class="input-group col-xs-10 col-lg-10">
                     <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
                     <input type="email" id="input-email-id" class="form-control" placeholder="Your mail Id">
                 </div>
-                <br>
-                <div class="input-group col-lg-10">
+                <p class="bg-warning"></p>
+                <div class="input-group col-xs-10 col-lg-10">
                     <span class="input-group-addon"><i class="fa fa-futbol-o"></i></span>
                     <input id="input-password" type="password" class="form-control" placeholder="Select Your Password">
+                </div>
+                <p class="bg-warning"></p>
+                <div class="input-group col-xs-10 col-lg-10">
+                    <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                    <input type="text" id="input-contact-no" class="form-control" placeholder="Street">
+                </div>
+                <p class="bg-warning"></p>
+                <div class="input-group col-xs-10 col-lg-10">
+                    <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                    <input type="text" id="input-contact-no" class="form-control" placeholder="city">
+                </div>
+                <p class="bg-warning"></p>
+                <div class="input-group col-xs-10 col-lg-10">
+                    <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                    <input type="text" id="input-contact-no" class="form-control" placeholder="State">
                 </div>
             </form>
             </div>
             <!--modal footer section  -->
-            <div class="modal-footer" id="footerone">
-                <button id ="create-account" type="button" class="btn btn-success center-block">SIGN-UP</button>
+            <div class="modal-footer">
+                <button id ="create-account" type="button" class="btn btn-success col-lg-8 col-xs-8 col-xs-offset-2 col-lg-offset-2">SIGN UP</button>
             </div>
             </div>
+            <div id="modaldiv3" class="hideall">
+            <div class="modal-body">
+              <form>
+               <div class="input-group col-xs-10 col-lg-10">
+                    <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
+                    <input type="email" id="input-email-id" class="form-control" placeholder="Enter Your Registered Mail Id">
+                </div>
+                </form>
+                <div class="modal-footer">
+                <button id ="create-account" type="button" class="btn btn-success col-lg-8 col-xs-8 col-xs-offset-2 col-lg-offset-2">SUBMIT</button>
+                </div>
+            </div>
+          </div>
           </div>
         </div>
       </div>
-      
+
   <div id="myCarousel" class="carousel slide" data-ride="carousel">          
   <div class="carousel-inner" role="listbox">
     <div class="item">

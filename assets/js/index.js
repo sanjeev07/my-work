@@ -222,6 +222,9 @@ $("#modaldiv1").removeClass("hideall");
 $("#modaldiv2").addClass("hideall");
 $("#signin").addClass("active");
 $("#signup").removeClass("active");
+$("#modaldiv3").addClass("hideall");
+$("#signup").removeClass("hideall");
+$("#signin").removeClass("hideall");
 });
 });
 $(document).ready(function(){
@@ -230,6 +233,7 @@ $("#modaldiv1").addClass("hideall");
 $("#modaldiv2").removeClass("hideall");
 $("#signup").addClass("active");
 $("#signin").removeClass("active");
+$("#modaldiv3").addClass("hideall");
 });
 });
 $(document).ready(function(){
@@ -238,5 +242,16 @@ $("#modaldiv1").removeClass("hideall");
 $("#modaldiv2").addClass("hideall");
 $("#signin").addClass("active");
 $("#signup").removeClass("active");
+$("#modaldiv3").addClass("hideall");
 });
+});
+
+$(document).ready(function(){
+  $("#user-forgotten-password").click(function(){
+     $("#modaldiv1").addClass("hideall");
+     $("#modaldiv2").addClass("hideall");
+     $("#modaldiv3").removeClass("hideall");
+     $("#signin").addClass("hideall");
+     $("#signup").addClass("hideall");
+  });
 });

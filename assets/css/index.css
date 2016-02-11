@@ -163,12 +163,14 @@ body, html{
     50%  {right: 10px;}
     100% {right: 25px;}
   }
-
+ 
+   
   #clickone{
         font-size: 15px;
         color:RGB(52, 175, 209);
-        position:absolute;
-        left: 90px;
+        position:relative;
+        /*left: 90px;*/
+        text-align: center;
         cursor:pointer;
         text-decoration:none;  
         font-weight: bold;
@@ -178,43 +180,52 @@ body, html{
     #clicktwo{
         font-size:15px;
         color:RGB(52, 175, 209);
-        position: absolute;
-        left: 100px;
+        position: relative;
+        /*left: 100px;*/
+        text-align: center;
         cursor:pointer;
         text-decoration:none;  
         font-weight: bold;
 
     }
-    #login-account{
-        width: 400px;
-        outline: none;
-        border:hidden;
-        position: relative;
-        left: 10px;
-        font-weight:600;
-    }
-    #create-account{
-        width: 400px;
-        outline: none;
-        border:hidden;
-        position: relative;
-        left: 10px;
-        font-weight:600;
-    }
-    #signin{
-        width:301px;
-        height:35px;
-        position: absolute;
+
+  #signin{
+        /*width:301px;
+        height:35px;*/
         /*border-right: 1px ridge rgb(52, 175, 209);*/ 
         /*transition-property: border-bottom;
         transition-duration: 0.5s;
         transition-timing-function: linear;*/
+        position: relative;
+        float: left;
+        top: 14px;
+        height:29px; 
     }
     #signup{
-        width:260px;
-        height:35px;
-        position: absolute;
-        left:315px;
+        /*width:260px;
+        height:35px;*/
+        /*left:315px;*/
+        position: relative;
+        float: left;
+        top: 15px;
+        height:28px;
+    }    
+        #login-account{
+        /*width: 400px;*/
+        outline: none;
+        border:hidden;
+        text-align: center;
+        position: relative;
+        font-weight:600;
+    }
+
+    #create-account{
+       /* width: 400px;*/
+        outline: none;
+        border:hidden;
+        text-align: center;
+        position: relative;
+        font-weight:600;
     }
     /*#signin:hover{
         border-bottom: 4px ridge #cb7602;
@@ -235,9 +246,9 @@ body, html{
   display: block;
   position: absolute;
   left: 0;
-  top : 33px;
+  bottom: -2px;
   width: 0;
-  height: 3px;
+  height: 4px;
   background-color: #52AFD1;
   content: "";
   transition: width 0.2s;
